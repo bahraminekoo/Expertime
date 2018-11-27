@@ -1,0 +1,20 @@
+{
+  "name": "expertime/iclient",
+  "description": "A module that imports the clients from specified api ",
+  "type": "magento2-module",
+  "version": "0.1.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "require": {
+    "php": "7.1.22"
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Expertime\\Iclient\\": ""
+    }
+  }
+}
+  

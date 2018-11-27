@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="expertime_iclient_import_index_data_source" xsi:type="string">Expertime\Iclient\Model\ResourceModel\User\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Expertime\Iclient\Model\ResourceModel\User\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">expertime_api_users</argument>
+            <argument name="resourceModel" xsi:type="string">Expertime\Iclient\Model\ResourceModel\User</argument>
+            <argument name="addFilter" xsi:type="array">
+                <item name="imported" xsi:type="object">Expertime\Iclient\Ui\DataProvider\User\AddImportedFilterToCollection</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Customer\Model\Metadata\Form\Image">
+        <plugin name="Validate_Image" type="Expertime\Iclient\Plugin\Metadata\Form\Image" sortOrder="1"/>
+    </type>
+    <type name="Magento\Customer\CustomerData\Customer">
+        <plugin name="customerData" type="Expertime\Iclient\Plugin\CustomerData\Customer" sortOrder="1"/>
+    </type>
+</config>

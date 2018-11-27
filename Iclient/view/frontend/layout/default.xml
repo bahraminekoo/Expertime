@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Expertime_Iclient::css/global-avatar.css"/>
+        <css src="Expertime_Iclient::css/review-item.css"/>
+    </head>
+    <body>
+        <referenceBlock name="customer">
+            <action method='setTemplate'>
+                <argument name='template' xsi:type='string'>Expertime_Iclient::account/customer.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

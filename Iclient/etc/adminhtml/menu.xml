@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Expertime_Iclient::expertime_menus"
+             title="Expertime"
+             module="Expertime_Iclient"
+             sortOrder="9999"
+             resource="Magento_Backend::content"
+        />
+        <add id="Expertime_Iclient::import_client"
+             title="Import Client"
+             module="Expertime_Iclient"
+             parent="Expertime_Iclient::expertime_menus"
+             sortOrder="0"
+             action="import_client/import/index"
+             resource="Magento_Backend::content"
+        />
+    </menu>
+</config>
